@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+        <title>CSS CD Player</title>
+    </head>
+    <body onselectstart='return false' onmousedown='return false'>
+        <div class='device'>
+        <div class='screen'><marquee>ASTRONOMIA.MP3</marquee></div>
+        <div class='cd'></div>
+        <div class='stick'></div>
+        <div class='company'>
+            <a target="_blank" href="https://www.youtube.com/channel/UCA_3t4pPc9GRIFiP86kRD2Q">Subscribe On Youtube</a>
+        </div>
+        <h2 class='name'>Music Player</h2>
+        </div>
+        <audio src='https://sancho1952007.github.io/Test-Repo./Vicetone%20&%20Tony%20Igy%20-%20Astronomia.mp3' id='music' loop onload="document.getElementById(this).play()"></audio>
+    </body>
+</html>
+
+<style>
+.device{
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    background-color: lightgrey;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cd{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 50px solid orange;
+    border-radius: 50%;
+    position: absolute;
+    top: 58%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+.screen{
+    position: absolute;
+    background-color: grey;
+    width: 130px;
+    border: 1px solid darkgray;
+    top: 10%;
+    left: 22%;
+    font-family: 'Orbitron', sans-serif;
+    transform: translate(-50%, -50%);
+}
+
+.stick{
+    position: absolute;
+    height: 100px;
+    width: 15px;
+    background-color: darkgrey;
+    border: 1px solid lightgrey;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    top: 13%;
+    left: 88%;
+    transform: translate(-50%, -50%);
+    animation: move 1s infinite;
+}
+@keyframes move{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(20deg);
+    }
+}
+
+.company{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.name{
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+marquee, h2{
+    pointer-events: none;
+}
+
+a:link{
+    color: blue;
+}
+
+a:visited{
+    color: blue;
+}
+</style>
+
+<script>
+ document.addEventListener('contextmenu', function (block){
+    block.preventDefault();
+});
+document.getElementById('music').play()
+</script>
