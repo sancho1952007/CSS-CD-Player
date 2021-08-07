@@ -14,7 +14,7 @@
         </div>
         <h2 class='name'>Music Player</h2>
         </div>
-        <audio src='https://sancho1952007.github.io/Test-Repo./Vicetone%20&%20Tony%20Igy%20-%20Astronomia.mp3' id='music' loop autoplay></audio>
+        <audio src='https://sancho1952007.github.io/Test-Repo./Vicetone%20&%20Tony%20Igy%20-%20Astronomia.mp3' id='music' loop></audio>
     </body>
 </html>
 
@@ -106,5 +106,11 @@ a:visited{
 <script>
  document.addEventListener('contextmenu', function (block){
     block.preventDefault();
+});
+
+alert('Click Anywhere To Start The Music!')
+    
+documment.addEventListener("click", function() {
+  document.getElementById('music').play()
 });
 </script>
